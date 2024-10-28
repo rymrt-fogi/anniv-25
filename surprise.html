@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Anniversary</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-light">
+    <!-- Play Audio Button -->
+    <div class="text-center my-3">
+      <button id="playButton" class="btn">Click this First!</button>
+    </div>
+
+    <section class="hide_section">
+      <header>
+        <nav
+          class="navbar navbar-expand-lg navbar-light"
+          style="background-color: #cc2936"
+        >
+          <div class="container">
+            <a class="navbar-brand text-white" href="index.html">Anniversary</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#love">Love</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#pictures">Pictures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#letter">Letter</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#about-us">About Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Love Section -->
+      <section
+        id="love"
+        class="py-5 text-center"
+        style="background-color: #f5f0f6"
+      >
+        <div class="container">
+          <img src="love.jpg" alt="" class="img-fluid" />
+          <div class="glass">
+            <h1 class="display-3 fw-bold fade-in">
+              Happy <span id="year"></span> Anniversary!
+            </h1>
+            <p class="lead mt-4 fst-italic text-white">
+              Lovers since October 25, 2017
+            </p>
+            <p id="date-difference" class="lead fw-bold"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pictures Section-->
+      <section id="pictures" class="py-5">
+        <div class="container">
+          <h2 class="text-center mb-5" style="color: #cc2936">
+            Pictures of Us
+          </h2>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <img
+                src="1.jpeg"
+                alt="Picture 1"
+                class="img-fluid rounded shadow-lg scale"
+                id="img-1"
+              />
+            </div>
+            <div class="col-md-4">
+              <img
+                src="2.jpg"
+                alt="Picture 2"
+                class="img-fluid rounded shadow-sm scale"
+              />
+            </div>
+            <div class="col-md-4">
+              <img
+                src="3.jpg"
+                alt="Picture 3"
+                class="img-fluid rounded shadow-sm scale"
+              />
+            </div>
+            <div class="col-md-2"></div>
+            <!-- Slider (Carousel) -->
+            <div class="col-md-8">
+              <div
+                id="pictureCarousel"
+                class="carousel slide mt-5"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <!-- First Slide (active) -->
+                  <div class="carousel-item active">
+                    <img
+                      src="4.jpg"
+                      class="d-block w-100"
+                      alt="Slide 1"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Endless Love</h5>
+                      <p>"Love is a journey, not a destination."</p>
+                    </div>
+                  </div>
+
+                  <!-- Second Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="5.jpg"
+                      class="d-block w-100"
+                      alt="Slide 2"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Timeless Affection</h5>
+                      <p>
+                        "In your smile, I see something more beautiful than the
+                        stars."
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Third Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="6.jpg"
+                      class="d-block w-100"
+                      alt="Slide 3"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Soulmate Vibes</h5>
+                      <p>"You are my today and all of my tomorrows."</p>
+                    </div>
+                  </div>
+
+                  <!-- Fourth Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="7.jpg"
+                      class="d-block w-100"
+                      alt="Slide 4"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Forever Together</h5>
+                      <p>
+                        "When I saw you, I fell in love, and you smiled because
+                        you knew."
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Fifth Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="8.jpg"
+                      class="d-block w-100"
+                      alt="Slide 5"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Heartbeats Aligned</h5>
+                      <p>
+                        "Love is when you meet someone who tells you something
+                        new about yourself."
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Sixth Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="9.jpeg"
+                      class="d-block w-100"
+                      alt="Slide 6"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Enduring Passion</h5>
+                      <p>
+                        "To love and be loved is to feel the sun from both
+                        sides."
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Seventh Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="10.jpeg"
+                      class="d-block w-100"
+                      alt="Slide 7"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Warmth in Your Eyes</h5>
+                      <p>
+                        "You are the source of my joy, the center of my world,
+                        and the whole of my heart."
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Eighth Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="11.jpeg"
+                      class="d-block w-100"
+                      alt="Slide 8"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Unspoken Love</h5>
+                      <p>
+                        "I love you not only for what you are but for what I am
+                        when I am with you."
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Ninth Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="12.jpeg"
+                      class="d-block w-100"
+                      alt="Slide 9"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Eternal Bond</h5>
+                      <p>
+                        "Love is not about how many days, months, or years
+                        you've been together. It's about how much you love each
+                        other every day."
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Tenth Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="13.jpg"
+                      class="d-block w-100"
+                      alt="Slide 10"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>True Devotion</h5>
+                      <p>"Where there is love, there is life."</p>
+                    </div>
+                  </div>
+
+                  <!-- Eleventh Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="14.jpg"
+                      class="d-block w-100"
+                      alt="Slide 11"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Love's Embrace</h5>
+                      <p>
+                        "The best thing to hold onto in life is each other."
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Twelfth Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="15.jpg"
+                      class="d-block w-100"
+                      alt="Slide 12"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Harmony in Love</h5>
+                      <p>"We loved with a love that was more than love."</p>
+                    </div>
+                  </div>
+
+                  <!-- Thirteenth Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="16.jpg"
+                      class="d-block w-100"
+                      alt="Slide 13"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Bond Beyond Words</h5>
+                      <p>
+                        "Your love is like the air I breathe, something I can't
+                        live without."
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Fourteenth Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="17.jpg"
+                      class="d-block w-100"
+                      alt="Slide 14"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Devoted Hearts</h5>
+                      <p>
+                        "Your love sets my heart on fire in ways I never
+                        imagined."
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Fifteenth Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="18.jpg"
+                      class="d-block w-100"
+                      alt="Slide 15"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>United Forever</h5>
+                      <p>
+                        "I love you not because of who you are, but because of
+                        who I am when I am with you."
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Sixteenth Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="19.jpg"
+                      class="d-block w-100"
+                      alt="Slide 16"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Heartbeat Connection</h5>
+                      <p>
+                        "Love isn't something you find. It's something that
+                        finds you."
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Seventeenth Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="20.jpg"
+                      class="d-block w-100"
+                      alt="Slide 17"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Boundless Affection</h5>
+                      <p>"True love stories never have endings."</p>
+                    </div>
+                  </div>
+
+                  <!-- Eighteenth Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="21.jpg"
+                      class="d-block w-100"
+                      alt="Slide 18"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Passion in the Silence</h5>
+                      <p>
+                        "You are the last thought in my mind before I drift off
+                        to sleep and the first thought when I wake up each
+                        morning."
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Nineteenth Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="22.jpg"
+                      class="d-block w-100"
+                      alt="Slide 19"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Radiant Hearts</h5>
+                      <p>"In your arms is where I belong."</p>
+                    </div>
+                  </div>
+
+                  <!-- Twentieth Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="23.jpg"
+                      class="d-block w-100"
+                      alt="Slide 20"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Whispered Promises</h5>
+                      <p>
+                        "I choose you. And I'll choose you over and over,
+                        without a doubt, in a heartbeat. I'll keep choosing
+                        you."
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Twenty-first Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="24.jpg"
+                      class="d-block w-100"
+                      alt="Slide 21"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Serendipity in Love</h5>
+                      <p>
+                        "I would rather spend one lifetime with you than face
+                        all the ages of this world alone."
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Twenty-second Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="25.jpg"
+                      class="d-block w-100"
+                      alt="Slide 22"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Faithful Devotion</h5>
+                      <p>
+                        "Love is composed of a single soul inhabiting two
+                        bodies."
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Twenty-third Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="26.jpg"
+                      class="d-block w-100"
+                      alt="Slide 23"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Unbreakable Bond</h5>
+                      <p>"My heart is and always will be yours."</p>
+                    </div>
+                  </div>
+                  <!-- Twenty-seventh Slide -->
+                  <!-- <div class="carousel-item">
+                    <img
+                      src="27.jpg"
+                      class="d-block w-100"
+                      alt="Slide 27"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Shared Dreams</h5>
+                      <p>
+                        "In dreams and in love, there are no impossibilities."
+                      </p>
+                    </div>
+                  </div> -->
+
+                  <!-- Twenty-eighth Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="28.jpg"
+                      class="d-block w-100"
+                      alt="Slide 28"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Starlit Nights</h5>
+                      <p>"You are my sun, my moon, and all my stars."</p>
+                    </div>
+                  </div>
+
+                  <!-- Twenty-ninth Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="29.jpg"
+                      class="d-block w-100"
+                      alt="Slide 29"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Endless Love</h5>
+                      <p>
+                        "I would rather spend one moment holding you than a
+                        lifetime knowing I never could."
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Thirtieth Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="30.jpg"
+                      class="d-block w-100"
+                      alt="Slide 30"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Magical Moments</h5>
+                      <p>"To love is to receive a glimpse of heaven."</p>
+                    </div>
+                  </div>
+
+                  <!-- Thirty-first Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="31.jpg"
+                      class="d-block w-100"
+                      alt="Slide 31"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Dreams Come True</h5>
+                      <p>"When I’m with you, I’m home."</p>
+                    </div>
+                  </div>
+
+                  <!-- Thirty-second Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="32.jpg"
+                      class="d-block w-100"
+                      alt="Slide 32"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Hearts Entwined</h5>
+                      <p>"Together we make a family."</p>
+                    </div>
+                  </div>
+
+                  <!-- Thirty-third Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="33.jpg"
+                      class="d-block w-100"
+                      alt="Slide 33"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Love's Journey</h5>
+                      <p>
+                        "The best thing to hold onto in life is each other."
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Thirty-fourth Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="34.jpg"
+                      class="d-block w-100"
+                      alt="Slide 34"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Intimate Moments</h5>
+                      <p>"You make my heart smile."</p>
+                    </div>
+                  </div>
+
+                  <!-- Thirty-fifth Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="35.jpg"
+                      class="d-block w-100"
+                      alt="Slide 35"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Pure Bliss</h5>
+                      <p>"You are the peanut butter to my jelly."</p>
+                    </div>
+                  </div>
+
+                  <!-- Thirty-sixth Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="36.jpg"
+                      class="d-block w-100"
+                      alt="Slide 36"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Heartfelt Connection</h5>
+                      <p>"You are my today and all of my tomorrows."</p>
+                    </div>
+                  </div>
+
+                  <!-- Thirty-seventh Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="37.jpg"
+                      class="d-block w-100"
+                      alt="Slide 37"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Enduring Love</h5>
+                      <p>
+                        "You are my heart, my life, my one and only thought."
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Thirty-eighth Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="38.jpg"
+                      class="d-block w-100"
+                      alt="Slide 38"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Unconditional Love</h5>
+                      <p>"You are my favorite notification."</p>
+                    </div>
+                  </div>
+
+                  <!-- Thirty-ninth Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="39.jpg"
+                      class="d-block w-100"
+                      alt="Slide 39"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>True Companionship</h5>
+                      <p>"Every love song is about you."</p>
+                    </div>
+                  </div>
+
+                  <!-- Fortieth Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="40.jpg"
+                      class="d-block w-100"
+                      alt="Slide 40"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>In Your Embrace</h5>
+                      <p>
+                        "I fell in love with you because of the million things
+                        you never knew you were doing."
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Forty-first Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="41.jpg"
+                      class="d-block w-100"
+                      alt="Slide 41"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Everlasting Happiness</h5>
+                      <p>"You are my sun, my moon, and all my stars."</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#pictureCarousel"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#pictureCarousel"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="col-md-2"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Letter Section -->
+      <section id="letter" class="py-5" style="background-color: #e23d4d">
+        <div class="container">
+          <h2 class="text-center mb-4">A Letter to My Love</h2>
+          <h4
+            class="text-center fw-bold"
+            style="text-shadow: 0px 0px 5px #ffdfe2"
+          >
+            To Jireh Faith Viernes (Wifey &#10084;)
+          </h4>
+          <p class="text-center fw-bold" style="color: #f5f0f6">
+            Hi my bebe, my love of my life, my wifey. Eto pala yung surprise ko
+            fy hahaha. Pangit noh simpleng website lang hahaha. Sana magustuhan
+            mo po. First of all nais kitang batiin ng HAPPY 7TH YEAR
+            ANNIVERSARY. Bilis ng panahon fy parang dati pinaasa mo lang ako
+            haha, ngayon malapit na kitang pakasalan hahaha char lang fy soon
+            payun washi pa akong work saka pera hahaha baka ayaw mo ng tig 50
+            pesos na singsing. Pero seryoso fy the more na nagtagal tayo the
+            more na nag matured at tumibay pagmamahalan natin sa isa't-isa. Sana
+            walang magbago fy. Tayo parin opo. Iloveyou so much wifey ko. Wala
+            na akong ibang hihilingin pa kundi ang makita kong tayo parin sa
+            future. Yung tayong sasakay tayo sa bus at sasabihing bayad po
+            dalawang senior. Corny noh pero yan ang totoo fy. Alam mo naman na
+            sigurong mahal na mahal kita at di na yun magbabago. Magiingat ka
+            lagi bebe. Papakasalan pa kita. Iloveyou and happy 7th anniversary.
+          </p>
+          <h4
+            class="text-center fw-bold"
+            style="text-shadow: 0px 0px 5px #ffdfe2"
+          >
+            From Reymart Eda (Hubby &#10084;)
+          </h4>
+        </div>
+      </section>
+
+      <!-- About Us Section -->
+      <section id="about-us" class="py-5 text-center">
+        <div class="container">
+          <h2 class="mb-4" style="color: #e23d4d">About Us</h2>
+          <p class="lead mb-5 slide-in fw-bold">
+            We (Reymart and Jireh) have been together since October 25, 2017.
+            It's been an incredible journey, going from enemies to lovers! We've
+            shared so many laughs, silly moments, and heartwarming memories
+            along the way. Every day together is a new adventure, filled with
+            love and support for each other. Here’s to our beautiful story and
+            many more amazing moments to come!
+          </p>
+          <img
+            src="about_us.jpg"
+            alt="A big picture of us"
+            class="img-fluid rounded shadow-sm"
+            style="max-width: 600px"
+          />
+        </div>
+      </section>
+
+      <!-- Audio Element -->
+      <audio
+        id="specialSong"
+        src="Ikaw At Ako (Instrumental).mp3"
+        preload="auto"
+        loop
+      ></audio>
+
+      <footer class="text-center py-4" style="background-color: #ffdfe2">
+        <p class="text-muted">&copy; 2017 Happy Anniversary FY &#128150;.</p>
+      </footer>
+    </section>
+
+    <!-- Bootstrap 5 JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Audio Control
+      const playButton = document.getElementById("playButton");
+      const specialSong = document.getElementById("specialSong");
+      const hideSection = document.querySelector(".hide_section"); // Assuming you have a section with this class
+
+      playButton.addEventListener("click", () => {
+        if (specialSong.paused) {
+          specialSong.play();
+          playButton.innerText = "Pause Audio";
+        } else {
+          specialSong.pause();
+          playButton.innerText = "Play Audio";
+        }
+
+        // Unblur the body and hide the button when clicked
+        hideSection.style.filter = "none"; // Unblur the hide section
+        playButton.style.display = "none"; // Hide the button
+      });
+    </script>
+    <script src="script.js"></script>
+
+    <script>
+      // Check if the document referrer is empty or undefined (manual URL entry)
+      if (document.referrer === "" || document.referrer === null) {
+        // Redirect to logout page
+        window.location.href = "index.html";
+      }
+    </script>
+  </body>
+</html>

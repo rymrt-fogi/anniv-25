@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Anniversary</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Background gradient with a softer red palette */
+      body {
+        background: linear-gradient(135deg, #e23d4d, #8f5e5e);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+      }
+
+      /* Central box styling */
+      .container-box {
+        background: #f2f2f8;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      h1 {
+        font-family: "Satisfy", cursive;
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #d36b6b;
+      }
+
+      .label_password {
+        font-family: "Satisfy", cursive;
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+        color: #555;
+        margin-bottom: 30px;
+      }
+
+      .btn {
+        padding: 12px 24px;
+        font-size: 1.2rem;
+        border-radius: 30px;
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .btn-danger {
+        background-color: #e27d7d;
+        border: none;
+      }
+
+      .btn-secondary {
+        background-color: #969696;
+        color: #555;
+        border: none;
+      }
+
+      .btn:hover {
+        transform: scale(1.05);
+      }
+
+      #responseText {
+        font-size: 1.2rem;
+        color: #d36b6b;
+      }
+
+      /* Fade In Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Eye icon for password visibility */
+      .toggle-password {
+        cursor: pointer;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      /* Input wrapper for position-relative */
+      .input-wrapper {
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-box">
+      <h1>A Special Surprise!</h1>
+      <p>Do you want to see your special surprise?</p>
+      <button
+        id="yesButton"
+        type="button"
+        class="btn btn-danger me-2"
+        data-bs-toggle="modal"
+        data-bs-target="#passwordModal"
+      >
+        YES
+      </button>
+      <button
+        id="noButton"
+        type="button"
+        class="btn btn-secondary"
+        onclick="handleNo()"
+      >
+        No
+      </button>
+      <p id="responseText" class="mt-3"></p>
+    </div>
+
+    <!-- Modal for Password Input -->
+    <div
+      class="modal fade"
+      id="passwordModal"
+      tabindex="-1"
+      aria-labelledby="passwordModalLabel"
+      aria-hidden="true"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="passwordForm">
+              <div class="mb-3 position-relative">
+                <label for="passwordInput" class="form-label label_password text-center"
+                  >To unlock the surprise, <b style="color: #e23d4d;">give your boyfriend a kiss to
+                  discover the password.</b></label
+                >
+                <div class="input-wrapper">
+                  <input
+                    type="password"
+                    class="form-control form-control-lg"
+                    id="passwordInput"
+                    placeholder="Enter password"
+                  />
+                  <i
+                    class="toggle-password bi bi-eye-slash"
+                    id="togglePassword"
+                  ></i>
+                </div>
+                <div id="errorMessage" class="text-danger mt-2"></div>
+              </div>
+              <button type="submit" class="btn btn-danger">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+
+    <script>
+      let noClickCount = 0; // Counter for No button clicks
+
+      function handleNo() {
+        noClickCount++; // Increment the click counter
+        const responseText = document.getElementById("responseText");
+        const noButton = document.getElementById("noButton");
+
+        // Update the text based on the number of clicks
+        switch (noClickCount) {
+          case 1:
+            responseText.innerText = "Promise it's beautiful!";
+            break;
+          case 2:
+            responseText.innerText = "Please!";
+            break;
+          case 3:
+            responseText.innerText = "Do you still love me?";
+            break;
+          case 4:
+            responseText.innerText = "It's a surprise worth seeing!";
+            break;
+          default:
+            responseText.innerText = "Wala kang choice kundi iopen hahahah";
+            noButton.style.display = "none"; // Hide the No button
+            break;
+        }
+      }
+
+      // Password visibility toggle
+      document
+        .getElementById("togglePassword")
+        .addEventListener("click", function () {
+          const passwordInput = document.getElementById("passwordInput");
+          const type =
+            passwordInput.getAttribute("type") === "password"
+              ? "text"
+              : "password";
+          passwordInput.setAttribute("type", type);
+          this.classList.toggle("bi-eye");
+          this.classList.toggle("bi-eye-slash");
+        });
+
+      // Form submission handler
+      document
+        .getElementById("passwordForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault(); // Prevent form submission
+          const password = document.getElementById("passwordInput").value;
+          const errorMessage = document.getElementById("errorMessage");
+
+          // Check the password
+          if (password === "JirehAndReymart10252017") {
+            window.location.href = "surprise.html"; // Redirect to surprise.html
+          } else if (password === "") {
+            errorMessage.innerText = "Input password!";
+          } else {
+            errorMessage.innerText = "Incorrect password! Try again.";
+          }
+        });
+    </script>
+  </body>
+</html>
